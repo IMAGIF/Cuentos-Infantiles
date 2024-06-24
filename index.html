@@ -63,7 +63,18 @@
             color: #fff;
             display: block;
             margin-bottom: 5px;
+         }
+        #video-player {
+            display: block;
+            margin: 0 auto; /* Centrar horizontalmente */
+            width: 100%; /* Ancho máximo del contenedor */
+            max-width: 800px; /* Ancho máximo del video */
+            height: auto; /* Altura automática para mantener la proporción */
+            border-radius: 10px;
         }
+        /* Otros estilos CSS aquí */
+
+}
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -122,29 +133,17 @@
             <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
             <h2>El Tesoro del Bosque Encantado</h2>
         </a>
-</style>
-    </div>
-<div class="contenido">
-    <video controls>
-        <source src="video/PRUEBA.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
-    <p>
-        Este es mi video local. Puedes controlar la reproducción usando los controles del reproductor de video.
-    </p>
-/* Estilos CSS para el video */
-#video-player {
-    display: block;
-    margin: 0 auto; /* Centrar horizontalmente */
-    width: 100%; /* Ancho máximo del contenedor */
-    max-width: 800px; /* Ancho máximo del video */
-    height: auto; /* Altura automática para mantener la proporción */
-    border-radius: 10px;
-}
-
-
 </div>
-
+<div class="contenido">
+        <!-- Video local incrustado -->
+        <video controls id="video-player">
+            <source src="videos/mi-video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>
+            Este es mi video local. Puedes controlar la reproducción usando los controles del reproductor de video.
+        </p>
+    </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
