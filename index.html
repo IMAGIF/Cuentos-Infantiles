@@ -56,6 +56,7 @@
             background-color: #1e2851;
             padding: 10px;
             border-radius: 5px;
+            display: none; /* Ocultar el menú por defecto */
         }
         nav a {
             text-decoration: none;
@@ -65,13 +66,26 @@
         }
     </style>
     <script>
-        // Función para ocultar el menú cuando se hace clic fuera de él
-        document.addEventListener("click", function(event) {
+        // Función para mostrar y ocultar el menú
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuButton = document.getElementById("menu-button");
             var menu = document.getElementById("menu");
-            var target = event.target;
-            if (!menu.contains(target)) {
-                menu.style.display = "none";
-            }
+            
+            menuButton.addEventListener("click", function() {
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none";
+                }
+            });
+            
+            // Ocultar el menú cuando se hace clic fuera de él
+            document.addEventListener("click", function(event) {
+                var target = event.target;
+                if (!menu.contains(target) && target !== menuButton) {
+                    menu.style.display = "none";
+                }
+            });
         });
     </script>
 </head>
