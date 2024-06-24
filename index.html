@@ -52,30 +52,39 @@
             position: absolute;
             top: 10px;
             left: 10px;
+            z-index: 1000; /* Asegura que esté sobre otros elementos */
+            background-color: #1e2851;
+            padding: 10px;
+            border-radius: 5px;
         }
         nav a {
             text-decoration: none;
             color: #fff;
-            padding: 5px 10px;
-            background-color: #1e2851;
-            border-radius: 5px;
-            margin-right: 10px; /* Espacio entre elementos del menú */
             display: block;
             margin-bottom: 5px;
         }
-        nav select {
-            margin-top: 10px;
-        }
     </style>
+    <script>
+        // Función para ocultar el menú cuando se hace clic fuera de él
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var target = event.target;
+            if (!menu.contains(target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
         <h1>Cuentos Infantiles</h1>
-        <nav>
+        <button id="menu-button">☰ Menú</button>
+        <nav id="menu">
             <a href="index.html">Inicio</a>
             <a href="cuento1.html">La Aventura de Tito el Tigre</a>
             <a href="cuento2.html">El Misterio del Bosque Oscuro</a>
             <a href="cuento3.html">El Tesoro del Bosque Encantado</a>
+            <!-- Agregar más enlaces según sea necesario -->
         </nav>
     </header>
     <div class="cuento">
