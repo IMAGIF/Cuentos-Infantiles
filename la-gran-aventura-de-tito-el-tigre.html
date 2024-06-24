@@ -13,37 +13,29 @@
             padding-bottom: 60px; /* Espacio para el footer */
             position: relative; /* Asegura que el footer esté al final */
         }
-
         header {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
         }
-
         .contenido {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center; /* Centrar el texto */
         }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-            height: 0;
-            overflow: hidden;
+        img {
+            display: block;
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px; /* Espacio debajo del video */
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
-
-        .video-container iframe, .video-container object, .video-container embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            padding: 0 20px;
         }
-
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
@@ -53,35 +45,97 @@
             bottom: 0;
             width: 100%;
         }
+        .menu-toggle {
+            display: none; /* Ocultar botón de menú inicialmente */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #1e2851;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000; /* Asegura que el botón esté por encima del contenido */
+        }
+        nav {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            background-color: #1e2851;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 999;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            background-color: #1e2851;
+            border-radius: 5px;
+            margin-bottom: 5px; /* Espacio entre elementos del menú */
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Ocultar menú en dispositivos pequeños */
+            }
+            .menu-toggle {
+                display: block; /* Mostrar botón de menú en dispositivos pequeños */
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>La Gran Aventura del Tigre Tito</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">Menú</button>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
+            <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
+            <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
+        </nav>
     </header>
     <div class="contenido">
-        <!-- Video de YouTube incrustado -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/-_dj0pvVXg8?si=EavfP4fNNqBjz-Wh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+     <div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-_dj0pvVXg8?si=EavfP4fNNqBjz-Wh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+
+
+<p>
+    Érase una vez, en una selva colorida y llena de vida, un pequeño tigre llamado Tito. Tito era muy curioso y siempre quería descubrir nuevos lugares y hacer nuevos amigos. Un día, Tito escuchó un rumor de que en la cima de la Gran Montaña Azul, había una cascada mágica que concedía deseos.
+</p>
+<p>
+    Tito, emocionado por la idea, decidió emprender una aventura para encontrar la cascada mágica. En su camino, se encontró con un loro llamado Lolo, que siempre tenía buenos consejos. Lolo le dijo que el viaje sería largo y lleno de desafíos, pero Tito estaba decidido.
+</p>
+<p>
+    A medida que avanzaban, Tito y Lolo encontraron un río caudaloso que debían cruzar. Justo cuando Tito pensaba que no podrían hacerlo, apareció una simpática rana llamada Rina, que les mostró cómo saltar de roca en roca para llegar al otro lado.
+</p>
+<p>
+    Más adelante, el camino se volvió empinado y difícil de escalar. Por suerte, encontraron a una tortuga sabia llamada Tula, que les enseñó la importancia de la paciencia y cómo encontrar los mejores senderos.
+</p>
+<p>
+    Finalmente, después de muchas aventuras, Tito, Lolo, y Rina llegaron a la cima de la Gran Montaña Azul. Allí, encontraron la cascada mágica. Tito cerró los ojos, hizo un deseo y, cuando los abrió, descubrió que la verdadera magia no estaba en la cascada, sino en los maravillosos amigos y las experiencias que había vivido.
+</p>
+<p>
+    Desde ese día, Tito aprendió que las mejores aventuras son aquellas compartidas con amigos y que cada desafío trae consigo una nueva lección.
+</p>
+
+     <div class="video">
+            <a href="https://youtu.be/-_dj0pvVXg8" target="_blank">Ver Video en YouTube</a>
         </div>
-        <p>
-            Érase una vez, en una selva colorida y llena de vida, un pequeño tigre llamado Tito. Tito era muy curioso y siempre quería descubrir nuevos lugares y hacer nuevos amigos. Un día, Tito escuchó un rumor de que en la cima de la Gran Montaña Azul, había una cascada mágica que concedía deseos.
-        </p>
-        <p>
-            Tito, emocionado por la idea, decidió emprender una aventura para encontrar la cascada mágica. En su camino, se encontró con un loro llamado Lolo, que siempre tenía buenos consejos. Lolo le dijo que el viaje sería largo y lleno de desafíos, pero Tito estaba decidido.
-        </p>
-        <p>
-            A medida que avanzaban, Tito y Lolo encontraron un río caudaloso que debían cruzar. Justo cuando Tito pensaba que no podrían hacerlo, apareció una simpática rana llamada Rina, que les mostró cómo saltar de roca en roca para llegar al otro lado.
-        </p>
-        <p>
-            Más adelante, el camino se volvió empinado y difícil de escalar. Por suerte, encontraron a una tortuga sabia llamada Tula, que les enseñó la importancia de la paciencia y cómo encontrar los mejores senderos.
-        </p>
-        <p>
-            Finalmente, después de muchas aventuras, Tito, Lolo, y Rina llegaron a la cima de la Gran Montaña Azul. Allí, encontraron la cascada mágica. Tito cerró los ojos, hizo un deseo y, cuando los abrió, descubrió que la verdadera magia no estaba en la cascada, sino en los maravillosos amigos y las experiencias que había vivido.
-        </p>
-        <p>
-            Desde ese día, Tito aprendió que las mejores aventuras son aquellas compartidas con amigos y que cada desafío trae consigo una nueva lección.
-        </p>
     </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
