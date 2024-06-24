@@ -11,41 +11,68 @@
             color: #333; /* Color de texto principal */
             margin: 0;
             padding-bottom: 60px; /* Espacio para el footer */
+            position: relative; /* Agregado para el posicionamiento del footer */
         }
-        h1 {
+        header {
+            background-color: #1e2851; /* Color de fondo azul oscuro */
+            color: #fff; /* Color de texto blanco */
             text-align: center;
-            color: #1e2851; /* Color azul oscuro */
+            padding: 10px 0;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         img {
             display: block;
-            margin: 0 auto;
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
         p {
             text-align: justify;
             line-height: 1.6;
-            padding: 0 20px; /* Espaciado alrededor del texto */
+            padding: 0 20px;
         }
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: absolute; /* Cambiado de fixed a absolute */
+            position: absolute;
             bottom: 0;
             width: 100%;
+        }
+        nav {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            background-color: #1e2851;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>La Aventura de Tito el Tigre</h1>
-    <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
-    <p>
-        En esta emocionante aventura, Tito el Tigre se embarca en una búsqueda para encontrar...
-        (Aquí iría el texto detallado del cuento).
-    </p>
+    <header>
+        <h1>La Aventura de Tito el Tigre</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+        </nav>
+    </header>
+    <div class="contenido">
+        <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
+        <p>
+            En esta emocionante aventura, Tito el Tigre se embarca en una búsqueda para encontrar...
+            (Aquí iría el texto detallado del cuento).
+        </p>
+    </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>

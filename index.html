@@ -3,56 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuentos Infantiles - Página de Inicio</title>
+    <title>Cuentos Infantiles</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f8ff; /* Color de fondo claro */
             color: #333; /* Color de texto principal */
             margin: 0;
-            padding: 0;
+            padding-bottom: 60px; /* Espacio para el footer */
         }
         header {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
+            padding: 10px 0;
+        }
+        .cuento {
+            display: flex;
+            justify-content: space-around;
             padding: 20px 0;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            background-color: #3b5998; /* Color de fondo azul */
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fff;
+        .cuento a {
             text-decoration: none;
-            font-size: 1.2em;
+            color: #333;
         }
-        .cuento-link {
+        .cuento img {
             display: block;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .cuento-link img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .cuento-link img:hover {
-            transform: scale(1.1);
+            margin-bottom: 10px;
         }
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: absolute;
             bottom: 0;
             width: 100%;
         }
@@ -62,31 +49,13 @@
     <header>
         <h1>Cuentos Infantiles</h1>
     </header>
-    <nav>
-        <a href="cuento1.html">La Aventura de Tito el Tigre</a>
-        <a href="cuento2.html">Cuento 2</a>
-        <a href="cuento3.html">Cuento 3</a>
-    </nav>
-    <section>
-        <div class="cuento-link">
-            <a href="cuento1.html">
-                <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
-                <h2>La Aventura de Tito el Tigre</h2>
-            </a>
-        </div>
-        <div class="cuento-link">
-            <a href="cuento2.html">
-                <img src="https://via.placeholder.com/600x400" alt="Imagen del cuento 2">
-                <h2>Cuento 2</h2>
-            </a>
-        </div>
-        <div class="cuento-link">
-            <a href="cuento3.html">
-                <img src="https://via.placeholder.com/600x400" alt="Imagen del cuento 3">
-                <h2>Cuento 3</h2>
-            </a>
-        </div>
-    </section>
+    <div class="cuento">
+        <a href="cuento1.html">
+            <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
+            <h2>La Aventura de Tito el Tigre</h2>
+        </a>
+        <!-- Aquí podrías añadir más cuentos -->
+    </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
