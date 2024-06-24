@@ -19,6 +19,7 @@
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
+            position: relative; /* Asegura que el menú se posiciona correctamente */
         }
 
         .contenido {
@@ -44,6 +45,14 @@
             height: 100%;
         }
 
+        .cuento img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto; /* Margen para separar la imagen del contenido */
+        }
+
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
@@ -53,6 +62,16 @@
             bottom: 0;
             width: 100%;
         }
+
+        .btn-inicio {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -60,9 +79,17 @@
         <h1>La Gran Aventura del Tigre Tito</h1>
     </header>
     <div class="contenido">
+        <!-- Botón de inicio -->
+        <a href="index.html" class="btn-inicio">Inicio</a>
+        
+        <!-- Imagen del cuento -->
+        <div class="cuento">
+            <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+        </div>
+
         <!-- Video de YouTube incrustado -->
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-_dj0pvVXg8?si=tmfPZqoeUDlW15Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>
             Érase una vez, en una selva colorida y llena de vida, un pequeño tigre llamado Tito. Tito era muy curioso y siempre quería descubrir nuevos lugares y hacer nuevos amigos. Un día, Tito escuchó un rumor de que en la cima de la Gran Montaña Azul, había una cascada mágica que concedía deseos.
