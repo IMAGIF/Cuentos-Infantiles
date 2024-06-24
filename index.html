@@ -21,7 +21,8 @@
         }
         .cuento {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column; /* Cambia a disposición vertical */
+            align-items: center; /* Centra los elementos verticalmente */
             padding: 20px 0;
         }
         .cuento a {
@@ -29,6 +30,7 @@
             color: #333;
             text-align: center; /* Alinear el título del cuento */
             display: block; /* Hacer que el enlace ocupe todo el contenedor */
+            margin-bottom: 10px; /* Espacio entre cada enlace */
         }
         .cuento img {
             display: block;
@@ -58,6 +60,11 @@
             background-color: #1e2851;
             border-radius: 5px;
             margin-right: 10px; /* Espacio entre elementos del menú */
+            display: block;
+            margin-bottom: 5px;
+        }
+        nav select {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -66,7 +73,9 @@
         <h1>Cuentos Infantiles</h1>
         <nav>
             <a href="index.html">Inicio</a>
-            <!-- Agregar más enlaces según sea necesario -->
+            <a href="cuento1.html">La Aventura de Tito el Tigre</a>
+            <a href="cuento2.html">El Misterio del Bosque Oscuro</a>
+            <a href="cuento3.html">El Tesoro del Bosque Encantado</a>
         </nav>
     </header>
     <div class="cuento">
@@ -74,9 +83,9 @@
             <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
             <h2>La Aventura de Tito el Tigre</h2>
         </a>
-        <<a href="cuento2.html">
+        <a href="cuento2.html">
             <img src="imagen/cuento2/imagen1.jpg" alt="Imagen del cuento 2">
-            <h2>La Carrera de la Liebre y la Tortuga</h2>
+            <h2>El Misterio del Bosque Oscuro</h2>
         </a>
         <a href="cuento3.html">
             <img src="imagen/cuento3/imagen1.jpg" alt="Imagen del cuento 3">
