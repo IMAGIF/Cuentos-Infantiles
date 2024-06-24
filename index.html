@@ -7,44 +7,44 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
+            background-color: #f0f8ff; /* Color de fondo claro */
+            color: #333; /* Color de texto principal */
             margin: 0;
-            padding-bottom: 60px;
-            position: relative;
+            padding-bottom: 60px; /* Espacio para el footer */
+            position: relative; /* Asegura que el footer esté al final */
         }
         header {
-            background-color: #1e2851;
-            color: #fff;
+            background-color: #1e2851; /* Color de fondo azul oscuro */
+            color: #fff; /* Color de texto blanco */
             text-align: center;
+            padding: 10px 0;
+        }
+        .cuento {
+            display: flex;
+            flex-direction: column; /* Cambia a disposición vertical */
+            align-items: center; /* Centra los elementos verticalmente */
             padding: 20px 0;
-            font-size: 24px;
         }
-        .contenido {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            font-size: 18px;
+        .cuento a {
+            text-decoration: none;
+            color: #333;
+            text-align: center; /* Alinear el título del cuento */
+            display: block; /* Hacer que el enlace ocupe todo el contenedor */
+            margin-bottom: 10px; /* Espacio entre cada enlace */
         }
-        img {
+        .cuento img {
             display: block;
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        p {
-            text-align: justify;
-            line-height: 1.6;
-            padding: 0 20px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         footer {
-            background-color: #1e2851;
-            color: #fff;
+            background-color: #1e2851; /* Color de fondo azul oscuro */
+            color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: absolute;
+            position: absolute; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
         }
@@ -52,68 +52,75 @@
             position: absolute;
             top: 10px;
             left: 10px;
+            z-index: 1000; /* Asegura que esté sobre otros elementos */
+            background-color: #1e2851;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Ocultar el menú por defecto */
         }
         nav a {
             text-decoration: none;
             color: #fff;
-            padding: 5px 10px;
-            background-color: #1e2851;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-        #menu-toggle {
-            display: none;
-        }
-        #menu-toggle:checked + .menu {
             display: block;
-        }
-        .menu {
-            display: none;
-            background-color: #1e2851;
-            position: absolute;
-            top: 40px;
-            left: 10px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .menu a {
-            display: block;
-            margin: 5px 0;
-        }
-        .menu-button {
-            display: inline-block;
-            background-color: #1e2851;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
+            margin-bottom: 5px;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuButton = document.getElementById("menu-button");
+            var menu = document.getElementById("menu");
+
+            // Función para mostrar y ocultar el menú
+            menuButton.addEventListener("click", function() {
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Ocultar el menú cuando se hace clic fuera de él
+            document.addEventListener("click", function(event) {
+                var target = event.target;
+                if (!menu.contains(target) && target !== menuButton) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Cerrar el menú cuando se hace clic en un enlace del menú
+            var menuLinks = menu.getElementsByTagName("a");
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener("click", function() {
+                    menu.style.display = "none";
+                });
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
         <h1>Cuentos Infantiles</h1>
-        <label for="menu-toggle" class="menu-button">Menú</label>
-        <input type="checkbox" id="menu-toggle">
-        <div class="menu">
+        <button id="menu-button">☰ Menú</button>
+        <nav id="menu">
             <a href="index.html">Inicio</a>
             <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
             <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
             <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
-        </div>
+            <!-- Agregar más enlaces según sea necesario -->
+        </nav>
     </header>
-    <div class="contenido">
-        <h2>La Gran Aventura del Tigre Tito</h2>
+    <div class="cuento">
         <a href="la-gran-aventura-de-tito-el-tigre.html">
             <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+            <h2>La Gran Aventura del Tigre Tito</h2>
         </a>
-        <h2>La Carrera entre la Liebre y la Tortuga</h2>
         <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
             <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+            <h2>El Tesoro del Bosque Encantado</h2>
         </a>
-        <h2>El Tesoro del Bosque Encantado</h2>
         <a href="el-tesoro-del-bosque-encantado.html">
             <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+            <h2>El Tesoro del Bosque Encantado</h2>
         </a>
     </div>
     <footer>
