@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuentos Infantiles</title>
     <style>
-/* Estilos para el botón de menú */
+        /* Estilos para el botón de menú */
         .menu-toggle {
             background-color: #000; /* Fondo negro */
             color: #fff; /* Texto blanco */
@@ -14,7 +14,8 @@
             border: none; /* Sin borde */
             cursor: pointer; /* Cursor de puntero al pasar por encima */
             border-radius: 5px; /* Bordes redondeados */
-}
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f8ff; /* Color de fondo claro */
@@ -23,18 +24,22 @@
             padding-bottom: 60px; /* Espacio para el footer */
             position: relative; /* Asegura que el footer esté al final */
         }
+
         header {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
+            position: relative; /* Asegura que el menú se posiciona correctamente */
         }
+
         .cuento {
             display: flex;
             flex-direction: column; /* Cambia a disposición vertical */
             align-items: center; /* Centra los elementos verticalmente */
             padding: 20px 0;
         }
+
         .cuento a {
             text-decoration: none;
             color: #333;
@@ -42,6 +47,7 @@
             display: block; /* Hacer que el enlace ocupe todo el contenedor */
             margin-bottom: 10px; /* Espacio entre cada enlace */
         }
+
         .cuento img {
             display: block;
             max-width: 100%;
@@ -49,6 +55,7 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
+
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
@@ -58,9 +65,10 @@
             bottom: 0;
             width: 100%;
         }
+
         nav {
             position: absolute;
-            top: 10px;
+            top: 50px; /* Ajusta según tu diseño */
             left: 10px;
             z-index: 1000; /* Asegura que esté sobre otros elementos */
             background-color: #1e2851;
@@ -68,12 +76,14 @@
             border-radius: 5px;
             display: none; /* Ocultar el menú por defecto */
         }
+
         nav a {
             text-decoration: none;
             color: #fff;
             display: block;
             margin-bottom: 5px;
-         }
+        }
+
         #video-player {
             display: block;
             margin: 0 auto; /* Centrar horizontalmente */
@@ -82,10 +92,49 @@
             height: auto; /* Altura automática para mantener la proporción */
             border-radius: 10px;
         }
-        /* Otros estilos CSS aquí */
-
-}
     </style>
+</head>
+<body>
+    <header>
+        <h1>Cuentos Infantiles</h1>
+        <!-- Botón de menú -->
+        <button class="menu-toggle" id="menu-button">Menú</button>
+        <!-- Menú desplegable -->
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
+            <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
+            <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
+            <!-- Agregar más enlaces según sea necesario -->
+        </nav>
+    </header>
+    <div class="cuento">
+        <a href="la-gran-aventura-de-tito-el-tigre.html">
+            <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+            <h2>La Gran Aventura del Tigre Tito</h2>
+        </a>
+        <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
+            <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+            <h2>La Carrera entre la Liebre y la Tortuga</h2>
+        </a>
+        <a href="el-tesoro-del-bosque-encantado.html">
+            <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+            <h2>El Tesoro del Bosque Encantado</h2>
+        </a>
+    </div>
+    <div class="contenido">
+        <!-- Video local incrustado -->
+        <video controls id="video-player">
+            <source src="video/PRUEBA.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>
+            Este es mi video local. Puedes controlar la reproducción usando los controles del reproductor de video.
+        </p>
+    </div>
+    <footer>
+        &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var menuButton = document.getElementById("menu-button");
@@ -117,45 +166,5 @@
             }
         });
     </script>
-</head>
-<body>
-    <header>
-        <h1>Cuentos Infantiles</h1>
-        <button class="menu-toggle">Menú</button>
-            <nav id="menu">
-            <a href="index.html">Inicio</a>
-            <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
-            <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
-            <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
-            <!-- Agregar más enlaces según sea necesario -->
-        </nav>
-    </header>
-    <div class="cuento">
-        <a href="la-gran-aventura-de-tito-el-tigre.html">
-            <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
-            <h2>La Gran Aventura del Tigre Tito</h2>
-        </a>
-        <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
-            <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
-            <h2>El Tesoro del Bosque Encantado</h2>
-        </a>
-        <a href="el-tesoro-del-bosque-encantado.html">
-            <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
-            <h2>El Tesoro del Bosque Encantado</h2>
-        </a>
-</div>
-<div class="contenido">
-        <!-- Video local incrustado -->
-        <video controls id="video-player">
-            <source src="video/PRUEBA.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
-        <p>
-            Este es mi video local. Puedes controlar la reproducción usando los controles del reproductor de video.
-        </p>
-    </div>
-    <footer>
-        &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
-    </footer>
 </body>
 </html>
