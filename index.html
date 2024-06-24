@@ -11,29 +11,33 @@
             color: #333;
             margin: 0;
             padding-bottom: 60px;
+            position: relative;
         }
         header {
             background-color: #1e2851;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            font-size: 24px;
         }
         .contenido {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            font-size: 18px;
         }
-        .cuento {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .cuento img {
+        img {
             display: block;
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: 0 auto;
-            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            padding: 0 20px;
+            margin-bottom: 20px;
         }
         footer {
             background-color: #1e2851;
@@ -44,29 +48,10 @@
             bottom: 0;
             width: 100%;
         }
-        .menu-toggle {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #1e2851;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
-        }
         nav {
             position: absolute;
             top: 10px;
             left: 10px;
-            display: flex;
-            flex-direction: column;
-            background-color: #1e2851;
-            border-radius: 5px;
-            padding: 10px;
-            z-index: 999;
         }
         nav a {
             text-decoration: none;
@@ -74,58 +59,62 @@
             padding: 5px 10px;
             background-color: #1e2851;
             border-radius: 5px;
-            margin-bottom: 5px;
+            margin-right: 10px;
         }
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            .menu-toggle {
-                display: block;
-            }
+        #menu-toggle {
+            display: none;
+        }
+        #menu-toggle:checked + .menu {
+            display: block;
+        }
+        .menu {
+            display: none;
+            background-color: #1e2851;
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu a {
+            display: block;
+            margin: 5px 0;
+        }
+        .menu-button {
+            display: inline-block;
+            background-color: #1e2851;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
-    <script>
-        function toggleMenu() {
-            var nav = document.querySelector('nav');
-            if (nav.style.display === 'flex') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'flex';
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
         <h1>Cuentos Infantiles</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">Menú</button>
-        <nav>
+        <label for="menu-toggle" class="menu-button">Menú</label>
+        <input type="checkbox" id="menu-toggle">
+        <div class="menu">
             <a href="index.html">Inicio</a>
             <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
             <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
             <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
-        </nav>
+        </div>
     </header>
     <div class="contenido">
-        <div class="cuento">
-            <a href="la-gran-aventura-de-tito-el-tigre.html">
-                <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
-            </a>
-            <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
-        </div>
-        <div class="cuento">
-            <a href="el-misterio-del-bosque.html">
-                <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
-            </a>
-            <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
-        </div>
-        <div class="cuento">
-            <a href="el-tesoro-del-bosque-encantado.html">
-                <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
-            </a>
-            <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-        </div>
+        <h2>La Gran Aventura del Tigre Tito</h2>
+        <a href="la-gran-aventura-de-tito-el-tigre.html">
+            <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+        </a>
+        <h2>La Carrera entre la Liebre y la Tortuga</h2>
+        <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
+            <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+        </a>
+        <h2>El Tesoro del Bosque Encantado</h2>
+        <a href="el-tesoro-del-bosque-encantado.html">
+            <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+        </a>
     </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
