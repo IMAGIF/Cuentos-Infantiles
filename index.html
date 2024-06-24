@@ -66,11 +66,11 @@
         }
     </style>
     <script>
-        // Función para mostrar y ocultar el menú
         document.addEventListener("DOMContentLoaded", function() {
             var menuButton = document.getElementById("menu-button");
             var menu = document.getElementById("menu");
-            
+
+            // Función para mostrar y ocultar el menú
             menuButton.addEventListener("click", function() {
                 if (menu.style.display === "none" || menu.style.display === "") {
                     menu.style.display = "block";
@@ -78,7 +78,7 @@
                     menu.style.display = "none";
                 }
             });
-            
+
             // Ocultar el menú cuando se hace clic fuera de él
             document.addEventListener("click", function(event) {
                 var target = event.target;
@@ -86,6 +86,14 @@
                     menu.style.display = "none";
                 }
             });
+
+            // Cerrar el menú cuando se hace clic en un enlace del menú
+            var menuLinks = menu.getElementsByTagName("a");
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener("click", function() {
+                    menu.style.display = "none";
+                });
+            }
         });
     </script>
 </head>
