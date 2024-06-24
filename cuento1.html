@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Aventura de Tito el Tigre</title>
+    <title>La Gran Aventura del Tigre Tito</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -45,10 +45,29 @@
             bottom: 0;
             width: 100%;
         }
+        .menu-toggle {
+            display: none; /* Ocultar botón de menú inicialmente */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #1e2851;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000; /* Asegura que el botón esté por encima del contenido */
+        }
         nav {
             position: absolute;
             top: 10px;
             left: 10px;
+            display: flex;
+            flex-direction: column;
+            background-color: #1e2851;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 999;
         }
         nav a {
             text-decoration: none;
@@ -56,22 +75,43 @@
             padding: 5px 10px;
             background-color: #1e2851;
             border-radius: 5px;
-            margin-right: 10px; /* Espacio entre elementos del menú */
+            margin-bottom: 5px; /* Espacio entre elementos del menú */
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Ocultar menú en dispositivos pequeños */
+            }
+            .menu-toggle {
+                display: block; /* Mostrar botón de menú en dispositivos pequeños */
+            }
         }
     </style>
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>La Aventura de Tito el Tigre</h1>
+        <h1>La Gran Aventura del Tigre Tito</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">Menú</button>
         <nav>
             <a href="index.html">Inicio</a>
+            <a href="cuento1.html">La Gran Aventura del Tigre Tito</a>
+            <a href="cuento2.html">El Misterio del Bosque</a>
+            <a href="cuento3.html">El Tesoro del Bosque Encantado</a>
         </nav>
     </header>
     <div class="contenido">
         <img src="imagen/cuento1/imagen1.jpg" alt="Imagen del cuento 1">
         <p>
-            En esta emocionante aventura, Tito el Tigre se embarca en una búsqueda para encontrar...
-            (Aquí iría el texto detallado del cuento).
+            Aquí va el texto detallado del cuento. Puedes incluir todo el contenido narrativo que desees contar a los lectores.
         </p>
     </div>
     <footer>
