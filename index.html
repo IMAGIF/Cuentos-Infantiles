@@ -162,16 +162,21 @@
         }
 
         .video-container {
-            margin: 20px auto;
+            width: 100%;
             max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
         }
 
         .video-container iframe {
-            display: block;
-            margin: 0 auto; /* Centrar el video horizontalmente */
-            width: 100%; /* Ancho completo del contenedor */
-            height: auto; /* Altura automática para mantener la proporción */
-            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -203,24 +208,21 @@
             </div>
         </div>
         <div class="cuento-item">
-            <a href="el-tesoro-del-bosque-encantado.html">
-            <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado"></a>
+            <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado"></a>
             <div class="texto">
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-                <p>✅🐻 ¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
+                <p>✅🐻¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
             </div>
         </div>
     </div>
-
     <!-- Video de YouTube incrustado -->
     <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/-_dj0pvVXg8?si=tmfPZqoeUDlW15Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
     <p class="contenido">Para ver más cuentos y canciones visítame en Youtube.</p>
-
     <footer>
         © 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
+
 </body>
 </html>
