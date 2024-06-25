@@ -93,7 +93,6 @@
             height: auto;
             border-radius: 10px;
             margin-right: 20px; /* Espacio entre la imagen y el texto */
-            cursor: pointer; /* Cursor de puntero */
         }
 
         .cuento-item .texto {
@@ -120,9 +119,29 @@
             color: #fff; /* Texto blanco */
             text-align: center;
             padding: 10px 0;
+            margin: 20px 0;
             width: 850px; /* Ancho igual al de la cabecera */
-            margin: 0 auto 20px; /* Centrado horizontal con margen inferior */
+            margin: 0 auto; /* Centrado horizontal */
             border-radius: 10px; /* Bordes redondeados */
+        }
+
+        @media (max-width: 600px) {
+            .barra-mensaje {
+                width: 90%; /* Ancho del 90% en dispositivos pequeños */
+                max-width: 100%; /* Ancho máximo */
+                padding: 10px; /* Espacio interno */
+                font-size: 14px; /* Tamaño de fuente más pequeño */
+            }
+
+            .cuento-item img {
+                width: 100%; /* Ancho completo para imágenes en dispositivos pequeños */
+                margin-right: 0; /* Sin margen a la derecha */
+                margin-bottom: 10px; /* Espacio inferior entre imágenes y texto */
+            }
+
+            .cuento-item .texto {
+                text-align: center; /* Centra el texto en dispositivos pequeños */
+            }
         }
 
         footer {
@@ -182,8 +201,7 @@
         <div class="cuento-item">
             <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado"></a>
             <div class="texto">
-                <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></
-            <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
+                <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
                 <p>¡Únete a Luna, Tito, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro! Este cuento animado lleno de magia y amistad capturará la imaginación de los más pequeños y los transportará a un mundo de diversión y aprendizaje.</p>
             </div>
         </div>
@@ -194,12 +212,11 @@
             <source src="video/PRUEBA.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        <p>
-            Puedes controlar la reproducción usando los controles del reproductor de video.
-        </p>
+        <p>Puedes controlar la reproducción usando los controles del reproductor de video.</p>
     </div>
     <footer>
         © 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
+
 </body>
 </html>
