@@ -89,7 +89,6 @@
             height: auto;
             border-radius: 10px;
             margin-right: 20px; /* Espacio entre la imagen y el texto */
-            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
         }
 
         .cuento-item .texto {
@@ -116,11 +115,11 @@
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: absolute; /* Posicionar el footer al final */
+            position: relative; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
-            max-width: 850px; /* Ancho máximo del footer */
-            margin: 0 auto; /* Centra el footer */
+            max-width: 850px; /* Ancho máximo igual al de la cabecera */
+            margin: 20px auto 0; /* Centra y ajusta el margen superior */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
         }
@@ -181,16 +180,16 @@
         </div>
     </div>
     <div class="contenido">
-        <!-- Video local incrustado -->
         <video controls id="video-player">
             <source src="video/PRUEBA.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
+        <p>
+            Puedes controlar la reproducción usando los controles del reproductor de video.
+        </p>
     </div>
     <footer>
-        <p>&copy; 2024 Todos los derechos reservados</p>
+        &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
 </body>
 </html>
-
-       
