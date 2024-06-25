@@ -34,8 +34,7 @@
         }
 
         .header-buttons a {
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco */
+            color: #fff; /* Texto blanco para todos los botones */
             padding: 10px 20px;
             font-size: 12px; /* Tamaño de fuente */
             border: none; /* Sin borde */
@@ -46,8 +45,7 @@
         }
 
         .header-buttons a.pinterest {
-            background-color: #e60023; /* Fondo rojo para Pinterest */
-            margin-left: 20px; /* Margen izquierdo */
+            background-color: #000; /* Fondo negro para Pinterest */
         }
 
         .header-buttons a.youtube {
@@ -56,7 +54,6 @@
 
         .header-buttons a.freecash {
             background-color: #228B22; /* Fondo verde oscuro para FreeCash */
-            margin-right: 20px; /* Margen derecho */
         }
 
         .titulo {
@@ -114,21 +111,14 @@
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
-            padding: 10px 0;
-            position: relative; /* Posicionar el footer al final */
+            padding: 10px 20px; /* Añadido para espaciado en el pie de página */
+            position: absolute; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
-            max-width: 850px; /* Ancho máximo igual al de la cabecera */
-            margin: 20px auto 0; /* Centra y ajusta el margen superior */
+            max-width: 850px; /* Ancho máximo igual que la cabecera */
+            margin: 20px auto; /* Centrado horizontal con margen superior */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-        }
-
-        .contenido {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Centrar el texto */
         }
 
         #video-player {
@@ -138,6 +128,16 @@
             max-width: 800px; /* Ancho máximo del video */
             height: auto; /* Altura automática para mantener la proporción */
             border-radius: 10px;
+        }
+
+        .separador {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: 1px solid #000; /* Barra horizontal de color negro */
+            text-align: center;
+            color: #fff; /* Texto en blanco */
+            font-size: 14px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -149,37 +149,41 @@
             <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube">YOUTUBE</a>
             <a href="https://freecash.com/r/IDEAS" class="freecash">FREECASH</a>
         </div>
+        <div class="separador">
+            <p>Para ver el cuento haz clic en la imagen o en el título del cuento que desees. Disfruta 😊</p>
+        </div>
     </header>
     <div class="cuento">
         <div class="cuento-item">
             <a href="la-gran-aventura-de-tito-el-tigre.html">
                 <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+                <div class="texto">
+                    <h2>La Gran Aventura del Tigre Tito</h2>
+                    <p>Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana. Juntos enfrentarán desafíos en su camino hacia la misteriosa Gran Montaña Azul, en busca de la mágica cascada que concede deseos.</p>
+                </div>
             </a>
-            <div class="texto">
-                <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
-                <p>Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana. Juntos enfrentarán desafíos en su camino hacia la misteriosa Gran Montaña Azul, en busca de la mágica cascada que concede deseos.</p>
-            </div>
         </div>
         <div class="cuento-item">
             <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
                 <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+                <div class="texto">
+                    <h2>La Carrera entre la Liebre y la Tortuga</h2>
+                    <p>Disfruta de esta divertida canción infantil sobre la clásica fábula de Esopo. Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación. ¡Perfecta para aprender y bailar en familia!</p>
+                </div>
             </a>
-            <div class="texto">
-                <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
-                <p>Disfruta de esta divertida canción infantil sobre la clásica fábula de Esopo. Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación. ¡Perfecta para aprender y bailar en familia!</p>
-            </div>
         </div>
         <div class="cuento-item">
             <a href="el-tesoro-del-bosque-encantado.html">
                 <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+                <div class="texto">
+                    <h2>El Tesoro del Bosque Encantado</h2>
+                    <p>¡Únete a Luna, Tito, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro! Este cuento animado lleno de magia y amistad capturará la imaginación de los más pequeños y los transportará a un mundo de diversión y aprendizaje.</p>
+                </div>
             </a>
-            <div class="texto">
-                <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-                <p>¡Únete a Luna, Tito, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro! Este cuento animado lleno de magia y amistad capturará la imaginación de los más pequeños y los transportará a un mundo de diversión y aprendizaje.</p>
-            </div>
         </div>
     </div>
     <div class="contenido">
+        <!-- Video local incrustado -->
         <video controls id="video-player">
             <source src="video/PRUEBA.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
