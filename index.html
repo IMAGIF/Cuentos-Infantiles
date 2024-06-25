@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuentos Infantiles</title>
     <style>
+        /* Estilos para el botón de menú */
+        .menu-toggle {
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            padding: 20px 40px; /* Doble tamaño de padding para aumentar el tamaño del botón */
+            font-size: 24px; /* Doble tamaño de fuente */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cursor de puntero al pasar por encima */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f8ff; /* Color de fondo claro */
@@ -20,94 +31,29 @@
             text-align: center;
             padding: 10px 0;
             position: relative; /* Asegura que el menú se posiciona correctamente */
-            max-width: 850px; /* Ancho máximo de la cabecera */
-            margin: 0 auto; /* Centra la cabecera */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-        }
-
-        .header-buttons {
-            display: flex;
-            justify-content: space-between; /* Asegura que los botones estén distribuidos como deseas */
-            padding: 0 20px; /* Espacio a los lados para los botones */
-            margin-top: 10px; /* Espacio entre el título y los botones */
-        }
-
-        .header-buttons a {
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco */
-            padding: 10px 20px;
-            font-size: 12px; /* Tamaño de fuente */
-            border: none; /* Sin borde */
-            cursor: pointer; /* Cursor de puntero al pasar por encima */
-            border-radius: 5px; /* Bordes redondeados */
-            text-decoration: none; /* Sin subrayado */
-            text-align: center; /* Centra el texto en los botones */
-        }
-
-        .header-buttons a.pinterest {
-            background-color: #e60023; /* Fondo rojo para Pinterest */
-            margin-left: 20px; /* Margen izquierdo */
-        }
-
-        .header-buttons a.youtube {
-            background-color: #ff0000; /* Fondo rojo para YouTube */
-        }
-
-        .header-buttons a.freecash {
-            background-color: #228B22; /* Fondo verde oscuro para FreeCash */
-            margin-right: 20px; /* Margen derecho */
-        }
-
-        .titulo {
-            font-size: 36px; /* Tamaño de fuente grande para el título */
-            margin: 20px 0; /* Espacio alrededor del título */
         }
 
         .cuento {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px; /* Espacio entre los elementos */
-            padding: 20px;
+            flex-direction: column; /* Cambia a disposición vertical */
+            align-items: center; /* Centra los elementos verticalmente */
+            padding: 20px 0;
         }
 
-        .cuento-item {
-            display: flex;
-            flex-direction: row; /* Coloca la imagen y el texto en una fila */
-            align-items: center; /* Centra verticalmente */
-            max-width: 800px;
-            width: 100%;
-            background-color: #fff; /* Fondo blanco para el contenido */
-            border-radius: 10px;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-        }
-
-        .cuento-item img {
-            width: 150px; /* Ancho de la imagen reducido */
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px; /* Espacio entre la imagen y el texto */
-        }
-
-        .cuento-item .texto {
-            flex-grow: 1;
-        }
-
-        .cuento-item h2 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .cuento-item p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-
-        .cuento-item a {
+        .cuento a {
             text-decoration: none;
             color: #333;
+            text-align: center; /* Alinear el título del cuento */
+            display: block; /* Hacer que el enlace ocupe todo el contenedor */
+            margin-bottom: 10px; /* Espacio entre cada enlace */
+        }
+
+        .cuento img {
+            display: block;
+            max-width: 50%; /* Reducir el ancho de la imagen a la mitad */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -118,6 +64,25 @@
             position: absolute; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
+        }
+
+        nav {
+            position: absolute;
+            top: 50px; /* Ajusta según tu diseño */
+            left: 10px;
+            z-index: 1000; /* Asegura que esté sobre otros elementos */
+            background-color: #1e2851;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Ocultar el menú por defecto */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px; /* Tamaño de fuente deseado */
         }
 
         .contenido {
@@ -139,35 +104,31 @@
 </head>
 <body>
     <header>
-        <h1 class="titulo">CUENTOS INFANTILES</h1>
-        <div class="header-buttons">
-            <a href="https://www.pinterest.es/InspiraCreatividadOnline/" class="pinterest">PINTEREST</a>
-            <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube">YOUTUBE</a>
-            <a href="https://freecash.com/r/IDEAS" class="freecash">FREECASH</a>
-        </div>
+        <h1>Cuentos Infantiles</h1>
+        <!-- Botón de menú -->
+        <button class="menu-toggle" id="menu-button">Menú</button>
+        <!-- Menú desplegable -->
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a>
+            <a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a>
+            <a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a>
+            <!-- Agregar más enlaces según sea necesario -->
+        </nav>
     </header>
     <div class="cuento">
-        <div class="cuento-item">
+        <a href="la-gran-aventura-de-tito-el-tigre.html">
             <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
-            <div class="texto">
-                <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
-                <p>Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana. Juntos enfrentarán desafíos en su camino hacia la misteriosa Gran Montaña Azul, en busca de la mágica cascada que concede deseos.</p>
-            </div>
-        </div>
-        <div class="cuento-item">
+            <h2>La Gran Aventura del Tigre Tito</h2>
+        </a>
+        <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
             <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
-            <div class="texto">
-                <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
-                <p>Disfruta de esta divertida canción infantil sobre la clásica fábula de Esopo. Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación. ¡Perfecta para aprender y bailar en familia!</p>
-            </div>
-        </div>
-        <div class="cuento-item">
+            <h2>La Carrera entre la Liebre y la Tortuga</h2>
+        </a>
+        <a href="el-tesoro-del-bosque-encantado.html">
             <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
-            <div class="texto">
-                <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-                <p>¡Únete a Luna, Tito, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro! Este cuento animado lleno de magia y amistad capturará la imaginación de los más pequeños y los transportará a un mundo de diversión y aprendizaje.</p>
-            </div>
-        </div>
+            <h2>El Tesoro del Bosque Encantado</h2>
+        </a>
     </div>
     <div class="contenido">
         <!-- Video local incrustado -->
@@ -182,5 +143,36 @@
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuButton = document.getElementById("menu-button");
+            var menu = document.getElementById("menu");
+
+            // Función para mostrar y ocultar el menú
+            menuButton.addEventListener("click", function() {
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Ocultar el menú cuando se hace clic fuera de él
+            document.addEventListener("click", function(event) {
+                var target = event.target;
+                if (!menu.contains(target) && target !== menuButton) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Cerrar el menú cuando se hace clic en un enlace del menú
+            var menuLinks = menu.getElementsByTagName("a");
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener("click", function() {
+                    menu.style.display = "none";
+                });
+            }
+        });
+    </script>
 </body>
 </html>
