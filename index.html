@@ -67,6 +67,7 @@
         .cuento {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 20px; /* Espacio entre los elementos */
             padding: 20px;
             max-width: 800px;
@@ -77,6 +78,8 @@
             display: flex;
             flex-direction: row; /* Coloca la imagen y el texto en una fila */
             align-items: center; /* Centra verticalmente */
+            max-width: 800px;
+            width: 100%;
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
             padding: 10px;
@@ -117,10 +120,21 @@
             position: absolute; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
-            max-width: 850px; /* Ancho máximo del footer */
-            margin: 0 auto; /* Centrar el footer */
+            max-width: 850px; /* Ancho máximo de la cabecera */
+            margin: 20px auto; /* Centra el pie de página y añade margen superior e inferior */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+        }
+
+        footer p {
+            margin: 0; /* Elimina el margen superior e inferior del párrafo dentro del pie de página */
+        }
+
+        .contenido {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Centrar el texto */
         }
 
         #video-player {
@@ -132,14 +146,11 @@
             border-radius: 10px;
         }
 
-        .mensaje {
-            background-color: #ff0000; /* Fondo rojo */
+        .mensaje-barra {
+            background-color: #000; /* Fondo negro */
             color: #fff; /* Texto blanco */
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 20px; /* Espacio inferior */
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+            padding: 10px; /* Espacio interno */
+            text-align: center; /* Alineación del texto */
         }
     </style>
 </head>
@@ -151,7 +162,7 @@
             <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube">YOUTUBE</a>
             <a href="https://freecash.com/r/IDEAS" class="freecash">FREECASH</a>
         </div>
-        <div class="mensaje">
+        <div class="mensaje-barra">
             <p>Para ver el cuento haz clic en la imagen o en el título del cuento que desees. Disfruta 😊</p>
         </div>
     </header>
@@ -180,8 +191,7 @@
     </div>
     <div class="contenido">
         <!-- Video local incrustado -->
-        <video controls id
-="video-player">
+        <video controls id="video-player">
             <source src="video/PRUEBA.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
