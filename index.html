@@ -72,32 +72,36 @@
         }
 
         .cuento-item {
-            max-width: 400px; /* Ancho máximo de cada cuento-item */
+            display: flex;
+            flex-wrap: wrap; /* Envuelve los cuento-items si no caben en una sola línea */
+            gap: 20px; /* Espacio entre los cuento-items */
+            max-width: 800px; /* Ancho máximo de cada cuento-item */
             width: 100%; /* Ancho completo en dispositivos pequeños */
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
             overflow: hidden; /* Evita que el contenido se desborde */
+            padding: 10px; /* Espaciado interno */
         }
 
         .cuento-item img {
-            width: 100%; /* Ancho completo de la imagen dentro del cuento-item */
+            width: 150px; /* Ancho de la imagen */
             height: auto;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-radius: 10px;
+            margin-right: 20px; /* Espacio entre la imagen y el texto */
         }
 
         .cuento-item .texto {
-            padding: 20px; /* Espaciado interno */
+            flex-grow: 1;
         }
 
         .cuento-item h2 {
+            margin: 0;
             font-size: 18px;
-            margin-top: 0;
         }
 
         .cuento-item p {
-            margin: 10px 0 0;
+            margin: 5px 0 0;
             font-size: 14px;
         }
 
@@ -130,8 +134,8 @@
         }
 
         .barra-mensaje {
-            background-color: #fff; /* Fondo blanco */
-            color: #000; /* Texto negro */
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
             text-align: center;
             padding: 10px 0;
             margin-top: 20px; /* Espacio encima de la barra */
@@ -152,21 +156,28 @@
     </div>
     <div class="cuento">
         <div class="cuento-item">
-            <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+            <a href="la-gran-aventura-de-tito-el-tigre.html">
+                <img src="imagen/cuento1/imagen1.jpg" alt="La Gran Aventura del Tigre Tito">
+            </a>
             <div class="texto">
                 <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
                 <p>Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana. Juntos enfrentarán desafíos en su camino hacia la misteriosa Gran Montaña Azul, en busca de la mágica cascada que concede deseos.</p>
             </div>
         </div>
         <div class="cuento-item">
-            <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+            <a href="la-carrera-de-la-liebre-y-la-tortuga.html">
+                <img src="imagen/cuento2/imagen1.jpg" alt="La Carrera entre la Liebre y la Tortuga">
+            </a>
             <div class="texto">
                 <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
                 <p>Disfruta de esta divertida canción infantil sobre la clásica fábula de Esopo. Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación. ¡Perfecta para aprender y bailar en familia!</p>
+            </div
             </div>
         </div>
         <div class="cuento-item">
-            <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+            <a href="el-tesoro-del-bosque-encantado.html">
+                <img src="imagen/cuento3/imagen1.jpg" alt="El Tesoro del Bosque Encantado">
+            </a>
             <div class="texto">
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
                 <p>¡Únete a Luna, Tito, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro! Este cuento animado lleno de magia y amistad capturará la imaginación de los más pequeños y los transportará a un mundo de diversión y aprendizaje.</p>
@@ -186,4 +197,5 @@
     <footer>
         <p>&copy; 2024 Cuentos Infantiles. Todos los derechos reservados.</p>
     </footer>
-</
+</body>
+</html>
