@@ -47,6 +47,7 @@
 
         .header-buttons a.pinterest {
             background-color: #000; /* Fondo negro para Pinterest */
+            color: #fff; /* Texto blanco */
         }
 
         .header-buttons a.youtube {
@@ -55,7 +56,6 @@
 
         .header-buttons a.freecash {
             background-color: #228B22; /* Fondo verde oscuro para FreeCash */
-            margin-right: 20px; /* Margen derecho */
         }
 
         .titulo {
@@ -64,39 +64,39 @@
         }
 
         .cuento {
-            display: flex;
-            flex-wrap: wrap; /* Envuelve los cuento-items si no caben en una sola línea */
-            gap: 20px; /* Espacio entre los cuento-items */
-            justify-content: center; /* Centra los cuento-items horizontalmente */
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Espacio entre los elementos */
         }
 
         .cuento-item {
             display: flex;
-            flex-wrap: wrap; /* Envuelve los cuento-items si no caben en una sola línea */
-            gap: 20px; /* Espacio entre los cuento-items */
-            max-width: 800px; /* Ancho máximo de cada cuento-item */
-            width: 100%; /* Ancho completo en dispositivos pequeños */
+            align-items: flex-start; /* Alinea los elementos de cada cuento */
+            max-width: 800px;
+            width: 100%;
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
+            padding: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-            overflow: hidden; /* Evita que el contenido se desborde */
-            padding: 10px; /* Espaciado interno */
         }
 
         .cuento-item img {
-            width: 150px; /* Ancho de la imagen */
+            width: 150px; /* Ancho de la imagen reducido */
             height: auto;
             border-radius: 10px;
             margin-right: 20px; /* Espacio entre la imagen y el texto */
         }
 
-        .cuento-item .texto {
+        .texto {
             flex-grow: 1;
         }
 
         .cuento-item h2 {
-            margin: 0;
+            margin-top: 0; /* Elimina el margen superior del título */
             font-size: 18px;
         }
 
@@ -110,6 +110,14 @@
             color: #333;
         }
 
+        .barra-mensaje {
+            background-color: #000; /* Fondo negro para la barra de mensaje */
+            color: #fff; /* Texto blanco */
+            text-align: center; /* Alineación del texto en el centro */
+            padding: 10px; /* Espaciado interno */
+            margin-top: 20px; /* Espacio superior */
+        }
+
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
@@ -118,12 +126,7 @@
             position: absolute; /* Posicionar el footer al final */
             bottom: 0;
             width: 100%;
-            left: 0; /* Alineación a la izquierda */
-            right: 0; /* Alineación a la derecha */
-        }
-
-        footer p {
-            margin: 0; /* Elimina el margen predeterminado del párrafo dentro del footer */
+            margin-top: 20px; /* Espacio superior */
         }
 
         .contenido {
@@ -133,12 +136,13 @@
             text-align: center; /* Centrar el texto */
         }
 
-        .barra-mensaje {
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco */
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px; /* Espacio encima de la barra */
+        #video-player {
+            display: block;
+            margin: 0 auto; /* Centrar horizontalmente */
+            width: 100%; /* Ancho máximo del contenedor */
+            max-width: 800px; /* Ancho máximo del video */
+            height: auto; /* Altura automática para mantener la proporción */
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -151,9 +155,6 @@
             <a href="https://freecash.com/r/IDEAS" class="freecash">FREECASH</a>
         </div>
     </header>
-    <div class="barra-mensaje">
-        <p>Para ver el cuento haz clic en la imagen o en el título del cuento que desees. Disfruta 😊</p>
-    </div>
     <div class="cuento">
         <div class="cuento-item">
             <a href="la-gran-aventura-de-tito-el-tigre.html">
@@ -171,7 +172,6 @@
             <div class="texto">
                 <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
                 <p>Disfruta de esta divertida canción infantil sobre la clásica fábula de Esopo. Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación. ¡Perfecta para aprender y bailar en familia!</p>
-            </div
             </div>
         </div>
         <div class="cuento-item">
@@ -184,6 +184,9 @@
             </div>
         </div>
     </div>
+        <div class="barra-mensaje">
+        <p>Para ver el cuento haz clic en la imagen o en el título del cuento que desees. Disfruta 😊</p>
+    </div>
     <div class="contenido">
         <!-- Video local incrustado -->
         <video controls id="video-player">
@@ -195,7 +198,7 @@
         </p>
     </div>
     <footer>
-        <p>&copy; 2024 Cuentos Infantiles. Todos los derechos reservados.</p>
+        &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
 </body>
 </html>
