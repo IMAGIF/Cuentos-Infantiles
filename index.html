@@ -55,8 +55,6 @@
             background-color: #ff0000; /* Fondo rojo para YouTube */
         }
 
-        
-
         .titulo {
             font-size: 36px; /* Tamaño de fuente grande para el título */
             margin: 20px 0; /* Espacio alrededor del título */
@@ -86,7 +84,7 @@
         }
 
         .cuento-item img {
-            width: 150px; /* Ancho de la imagen reducido */
+            width: 150px; /* Ancho de la imagen */
             height: auto;
             border-radius: 10px;
             margin-right: 20px; /* Espacio entre la imagen y el texto */
@@ -130,14 +128,20 @@
                 font-size: 14px; /* Tamaño de fuente más pequeño */
             }
 
+            .cuento-item {
+                flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+                align-items: flex-start; /* Alinear al principio */
+            }
+
             .cuento-item img {
-                width: 100%; /* Ancho completo para imágenes en dispositivos pequeños */
+                width: 150px; /* Mantener el ancho de la imagen */
                 margin-right: 0; /* Sin margen a la derecha */
                 margin-bottom: 10px; /* Espacio inferior entre imágenes y texto */
             }
 
             .cuento-item .texto {
                 text-align: center; /* Centra el texto en dispositivos pequeños */
+                width: 100%;
             }
         }
 
@@ -185,7 +189,6 @@
         <div class="header-buttons">
             <a href="https://www.pinterest.es/InspiraCreatividadOnline/" class="pinterest" target="_blank">PINTEREST</a>
             <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube" target="_blank">YOUTUBE</a>
-            
         </div>
     </header>
     <div class="barra-mensaje">
@@ -210,14 +213,14 @@
             <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado"></a>
             <div class="texto">
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-                <p>✅🐻¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
+                <p>✅🐻 ¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
             </div>
         </div>
         <div class="cuento-item">
             <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante"></a>
             <div class="texto">
                 <h2><a href="la-fábula-de-la-gacela-y-el-león.html">La Fábula de la Gacela y el León</a></h2>
-                <p>✅🦁🦌Descubre la hermosa amistad entre un león y una gacela!.</p>
+                <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!.</p>
             </div>    
         </div>
     </div>
