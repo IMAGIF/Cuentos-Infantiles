@@ -129,19 +129,18 @@
             }
 
             .cuento-item {
-                flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
-                align-items: flex-start; /* Alinear al principio */
+                flex-direction: row; /* Mantener la dirección de fila */
+                align-items: center;
+                text-align: center; /* Centrar el texto */
             }
 
             .cuento-item img {
-                width: 150px; /* Mantener el ancho de la imagen */
-                margin-right: 0; /* Sin margen a la derecha */
-                margin-bottom: 10px; /* Espacio inferior entre imágenes y texto */
+                width: 100px; /* Ajustar el ancho de la imagen para dispositivos pequeños */
+                margin-right: 10px; /* Espacio reducido entre la imagen y el texto */
             }
 
             .cuento-item .texto {
-                text-align: center; /* Centra el texto en dispositivos pequeños */
-                width: 100%;
+                text-align: left; /* Alinear el texto a la izquierda */
             }
         }
 
@@ -221,7 +220,7 @@
             <div class="texto">
                 <h2><a href="la-fábula-de-la-gacela-y-el-león.html">La Fábula de la Gacela y el León</a></h2>
                 <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!.</p>
-            </div>    
+            </div>
         </div>
     </div>
     <!-- Video de YouTube incrustado -->
