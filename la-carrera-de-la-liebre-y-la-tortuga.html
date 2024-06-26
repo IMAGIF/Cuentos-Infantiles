@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cuento2</title>
+    <title>✅🐇La Carrera de la Liebre y la Tortuga</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,29 +13,46 @@
             padding-bottom: 60px; /* Espacio para el footer */
             position: relative; /* Asegura que el footer esté al final */
         }
+
         header {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
+            position: relative; /* Asegura que el menú se posiciona correctamente */
         }
+
         .contenido {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 20px;
+            text-align: center; /* Centrar el texto */
         }
-        img {
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px; /* Espacio debajo del video */
+        }
+
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cuento img {
             display: block;
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin: 20px auto; /* Margen para separar la imagen del contenido */
         }
-        p {
-            text-align: justify;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
+
         footer {
             background-color: #1e2851; /* Color de fondo azul oscuro */
             color: #fff; /* Color de texto blanco */
@@ -45,34 +62,52 @@
             bottom: 0;
             width: 100%;
         }
-        nav {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        nav a {
+
+        .btn-inicio {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 20px 40px; /* Doble tamaño de padding para aumentar el tamaño del botón */
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
             text-decoration: none;
-            color: #fff;
-            padding: 5px 10px;
-            background-color: #1e2851;
             border-radius: 5px;
-            margin-right: 10px; /* Espacio entre elementos del menú */
+            font-size: 32px; /* Doble tamaño de fuente */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>La Carrera de la Liebre y la Tortuga</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-        </nav>
+        <h1>✅🐇La Carrera de la Liebre y la Tortuga</h1>
     </header>
     <div class="contenido">
-        <img src="imagen/cuento2/imagen1.jpg" alt="Imagen del cuento 2">
+        <!-- Botón de inicio -->
+        <a href="index.html" class="btn-inicio">Inicio</a>
+        
+        <!-- Imagen del cuento -->
+        <div class="cuento">
+            <img src="imagen/cuento1/imagen1.avif" alt="Una bonita imagen del cuento con la liebre y la tortuga">
+        </div>
+
+        <!-- Video de YouTube incrustado -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jmAYzm_PnGY?si=TSvX42-XqZSwaVxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <p>
-            El cuento de la carrera entre una liebre y una tortuga.
-            (Aquí iría el texto detallado del cuento).
+            ✅🐇Érase una vez en un tranquilo bosque vivían una liebre y una tortuga. La liebre, conocida por su velocidad, siempre se burlaba de la tortuga por ser lenta. Un día, la liebre retó a la tortuga a una carrera.
         </p>
+        <p>
+            Durante la carrera, la liebre, confiada de su victoria, se detuvo a descansar y se quedó dormida mientras la tortuga seguía avanzando con constancia.
+        </p>
+        <p>
+            La tortuga continuó sin rendirse y cruzó la meta, ganando la carrera mientras la liebre despertaba confundida y sorprendida.
+        </p>
+        <p>
+            La tortuga recibió el premio por su perseverancia. Mientras tanto, la liebre, humilde y arrepentida, lloraba por su arrogancia. La tortuga celebró con alegría su triunfo.
+        </p>
+        <p>
+            Con una sonrisa, la tortuga se despidió y guiñó un ojo al público, enseñando que la constancia y el esfuerzo son más valiosos que la rapidez.
+        </p>
+        
     </div>
     <footer>
         &copy; 2024 Cuentos Infantiles. Todos los derechos reservados.
