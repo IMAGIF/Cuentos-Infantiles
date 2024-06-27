@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuentos Infantiles</title>
+    <link rel="canonical" href="URL_DE_LA_PAGINA">
+    <meta name="description" content="Descubre los mejores cuentos infantiles para leer a tus hijos. Cuentos cortos y educativos para niños.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -129,18 +133,19 @@
             }
 
             .cuento-item {
-                flex-direction: row; /* Mantener la dirección de fila */
-                align-items: center;
+                flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+                align-items: center; /* Centrar el contenido */
                 text-align: center; /* Centrar el texto */
             }
 
             .cuento-item img {
                 width: 100px; /* Ajustar el ancho de la imagen para dispositivos pequeños */
-                margin-right: 10px; /* Espacio reducido entre la imagen y el texto */
+                margin-right: 0; /* Eliminar el margen derecho */
+                margin-bottom: 10px; /* Agregar margen inferior */
             }
 
             .cuento-item .texto {
-                text-align: left; /* Alinear el texto a la izquierda */
+                text-align: center; /* Alinear el texto al centro */
             }
         }
 
@@ -186,8 +191,8 @@
     <header>
         <h1 class="titulo">CUENTOS INFANTILES</h1>
         <div class="header-buttons">
-            <a href="https://www.pinterest.es/InspiraCreatividadOnline/" class="pinterest" target="_blank">PINTEREST</a>
-            <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube" target="_blank">YOUTUBE</a>
+            <a href="https://www.pinterest.es/InspiraCreatividadOnline/" class="pinterest" target="_blank" rel="noopener">PINTEREST</a>
+            <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube" target="_blank" rel="noopener">YOUTUBE</a>
         </div>
     </header>
     <div class="barra-mensaje">
@@ -195,28 +200,28 @@
     </div>
     <div class="cuento">
         <div class="cuento-item">
-            <a href="la-gran-aventura-de-tito-el-tigre.html"><img src="imagen/cuento1/imagen3.avif" alt="Un bonito y colorido dibujo del personaje de Tito el Tigre"></a>
+            <a href="la-gran-aventura-de-tito-el-tigre.html"><img src="imagen/cuento1/imagen3.avif" alt="Un bonito y colorido dibujo del personaje de Tito el Tigre" width="150" height="auto"></a>
             <div class="texto">
                 <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
                 <p>✅🐯 Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana.</p>
             </div>
         </div>
         <div class="cuento-item">
-            <a href="la-carrera-de-la-liebre-y-la-tortuga.html"><img src="imagen/cuento2/imagen1.avif" alt="Un bonito dibujo de los personajes del cuento de la liebre y la tortuga"></a>
+            <a href="la-carrera-de-la-liebre-y-la-tortuga.html"><img src="imagen/cuento2/imagen1.avif" alt="Un bonito dibujo de los personajes del cuento de la liebre y la tortuga" width="150" height="auto"></a>
             <div class="texto">
                 <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
                 <p>✅🐢 Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación.</p>
             </div>
         </div>
         <div class="cuento-item">
-            <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado"></a>
+            <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado" width="150" height="auto"></a>
             <div class="texto">
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
                 <p>✅🐻 ¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
             </div>
         </div>
         <div class="cuento-item">
-            <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante"></a>
+            <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante" width="150" height="auto"></a>
             <div class="texto">
                 <h2><a href="la-fábula-de-la-gacela-y-el-león.html">La Fábula de la Gacela y el León</a></h2>
                 <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!.</p>
