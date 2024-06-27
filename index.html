@@ -26,6 +26,7 @@
             position: fixed; /* Asegura que el menú esté fijo en la parte superior */
             width: 100%; /* Ancho completo */
             z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+            top: 0;
         }
 
         .header-buttons {
@@ -76,9 +77,6 @@
         }
 
         .cuento-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
             padding: 10px;
@@ -92,6 +90,9 @@
             height: auto;
             border-radius: 10px;
             margin-bottom: 10px; /* Espacio debajo de la imagen */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cuento-item h2 {
@@ -189,12 +190,12 @@
             <div class="cuento-item">
                 <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado" width="150" height="auto"></a>
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
-                <p>✅🐻 ¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
+                <p>✅🧸 Únete a Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!</p>
             </div>
             <div class="cuento-item">
                 <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante" width="150" height="auto"></a>
                 <h2><a href="la-fábula-de-la-gacela-y-el-león.html">La Fábula de la Gacela y el León</a></h2>
-                <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!.</p>
+                <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!</p>
             </div>
         </div>
         <div class="video-container">
