@@ -6,7 +6,7 @@
     <title>Cuentos Infantiles</title>
     <link rel="canonical" href="URL_DE_LA_PAGINA">
     <meta name="description" content="Descubre los mejores cuentos infantiles para leer a tus hijos. Cuentos cortos y educativos para niños.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; frame-ancestors 'self'; form-action 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <style>
         body {
@@ -23,17 +23,15 @@
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: relative; /* Asegura que el menú se posiciona correctamente */
-            max-width: 850px; /* Ancho máximo de la cabecera */
-            margin: 0 auto; /* Centra la cabecera */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+            position: fixed; /* Asegura que el menú esté fijo en la parte superior */
+            width: 100%; /* Ancho completo */
+            z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
         }
 
         .header-buttons {
             display: flex;
-            justify-content: space-between; /* Asegura que los botones estén distribuidos como deseas */
-            padding: 0 20px; /* Espacio a los lados para los botones */
+            justify-content: center;
+            gap: 20px; /* Espacio entre los botones */
             margin-top: 10px; /* Espacio entre el título y los botones */
         }
 
@@ -52,7 +50,6 @@
         .header-buttons a.pinterest {
             background-color: #fff; /* Fondo blanco para Pinterest */
             color: #000; /* Texto negro */
-            margin-left: 20px; /* Margen izquierdo */
         }
 
         .header-buttons a.youtube {
@@ -64,48 +61,49 @@
             margin: 20px 0; /* Espacio alrededor del título */
         }
 
+        .contenido-principal {
+            margin-top: 100px; /* Espacio para que el contenido no se superponga con el header */
+        }
+
         .cuento {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan */
             gap: 20px; /* Espacio entre los elementos */
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            justify-content: center; /* Centra los elementos */
         }
 
         .cuento-item {
             display: flex;
-            flex-direction: row; /* Coloca la imagen y el texto en una fila */
-            align-items: center; /* Centra verticalmente */
-            max-width: 800px;
-            width: 100%;
+            flex-direction: column;
+            align-items: center;
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-            margin-bottom: 20px; /* Espacio entre los cuentos */
+            width: calc(50% - 20px); /* Ancho de cada item */
+            max-width: 400px;
         }
 
         .cuento-item img {
             width: 150px; /* Ancho de la imagen */
             height: auto;
             border-radius: 10px;
-            margin-right: 20px; /* Espacio entre la imagen y el texto */
-        }
-
-        .cuento-item .texto {
-            flex-grow: 1;
+            margin-bottom: 10px; /* Espacio debajo de la imagen */
         }
 
         .cuento-item h2 {
             margin: 0;
             font-size: 18px;
+            text-align: center; /* Centra el texto */
         }
 
         .cuento-item p {
             margin: 5px 0 0;
             font-size: 14px;
+            text-align: center; /* Centra el texto */
         }
 
         .cuento-item a {
@@ -119,33 +117,20 @@
             text-align: center;
             padding: 10px 0;
             margin: 20px 0;
-            width: 850px; /* Ancho igual al de la cabecera */
-            margin: 0 auto; /* Centrado horizontal */
             border-radius: 10px; /* Bordes redondeados */
+            width: calc(100% - 40px); /* Ancho completo menos el padding */
+            max-width: 1200px;
+            margin: 20px auto; /* Centra la barra horizontalmente */
         }
 
         @media (max-width: 600px) {
-            .barra-mensaje {
-                width: 90%; /* Ancho del 90% en dispositivos pequeños */
-                max-width: 100%; /* Ancho máximo */
-                padding: 10px; /* Espacio interno */
-                font-size: 14px; /* Tamaño de fuente más pequeño */
-            }
-
             .cuento-item {
-                flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
-                align-items: center; /* Centrar el contenido */
-                text-align: center; /* Centrar el texto */
+                width: calc(100% - 20px); /* Ancho completo menos el gap */
             }
 
-            .cuento-item img {
-                width: 100px; /* Ajustar el ancho de la imagen para dispositivos pequeños */
-                margin-right: 0; /* Eliminar el margen derecho */
-                margin-bottom: 10px; /* Agregar margen inferior */
-            }
-
-            .cuento-item .texto {
-                text-align: center; /* Alinear el texto al centro */
+            .header-buttons {
+                flex-direction: column; /* Cambia la dirección a columna */
+                gap: 10px; /* Ajusta el espacio entre los botones */
             }
         }
 
@@ -154,24 +139,15 @@
             color: #fff; /* Color de texto blanco */
             text-align: center;
             padding: 10px 0;
-            position: relative; /* Cambiado a relativo */
-            max-width: 850px; /* Ancho máximo del footer */
-            margin: 0 auto; /* Centrar el footer */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-        }
-
-        .contenido {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Centrar el texto */
+            position: fixed; /* Fija el footer en la parte inferior */
+            width: 100%; /* Ancho completo */
+            bottom: 0; /* Posiciona en la parte inferior */
         }
 
         .video-container {
             width: 100%;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto; /* Centra el contenedor */
             overflow: hidden;
             position: relative;
             padding-bottom: 56.25%; /* Proporción 16:9 */
@@ -195,44 +171,37 @@
             <a href="https://www.youtube.com/channel/UC8m_l7-pDh3W0jnSKNayLLw?sub_confirmation=1" class="youtube" target="_blank" rel="noopener">YOUTUBE</a>
         </div>
     </header>
-    <div class="barra-mensaje">
-        <p>Haz clic en la imagen que desees y verás un bonito cuento. 😊</p>
-    </div>
-    <div class="cuento">
-        <div class="cuento-item">
-            <a href="la-gran-aventura-de-tito-el-tigre.html"><img src="imagen/cuento1/imagen3.avif" alt="Un bonito y colorido dibujo del personaje de Tito el Tigre" width="150" height="auto"></a>
-            <div class="texto">
+    <div class="contenido-principal">
+        <div class="barra-mensaje">
+            <p>Haz clic en la imagen que desees y verás un bonito cuento. 😊</p>
+        </div>
+        <div class="cuento">
+            <div class="cuento-item">
+                <a href="la-gran-aventura-de-tito-el-tigre.html"><img src="imagen/cuento1/imagen3.avif" alt="Un bonito y colorido dibujo del personaje de Tito el Tigre" width="150" height="auto"></a>
                 <h2><a href="la-gran-aventura-de-tito-el-tigre.html">La Gran Aventura del Tigre Tito</a></h2>
                 <p>✅🐯 Únete a Tito el Tigre en una emocionante aventura a través de la selva, donde conocerá nuevos amigos como Lolo el loro y Rina la rana.</p>
             </div>
-        </div>
-        <div class="cuento-item">
-            <a href="la-carrera-de-la-liebre-y-la-tortuga.html"><img src="imagen/cuento2/imagen1.avif" alt="Un bonito dibujo de los personajes del cuento de la liebre y la tortuga" width="150" height="auto"></a>
-            <div class="texto">
+            <div class="cuento-item">
+                <a href="la-carrera-de-la-liebre-y-la-tortuga.html"><img src="imagen/cuento2/imagen1.avif" alt="Un bonito dibujo de los personajes del cuento de la liebre y la tortuga" width="150" height="auto"></a>
                 <h2><a href="la-carrera-de-la-liebre-y-la-tortuga.html">La Carrera entre la Liebre y la Tortuga</a></h2>
                 <p>✅🐢 Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación.</p>
             </div>
-        </div>
-        <div class="cuento-item">
-            <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado" width="150" height="auto"></a>
-            <div class="texto">
+            <div class="cuento-item">
+                <a href="el-tesoro-del-bosque-encantado.html"><img src="imagen/cuento3/imagen1.avif" alt="Un bonito dibujo con Bobi, el oso, y todos sus amigos del cuento del tesoro del bosque encantado" width="150" height="auto"></a>
                 <h2><a href="el-tesoro-del-bosque-encantado.html">El Tesoro del Bosque Encantado</a></h2>
                 <p>✅🐻 ¡Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro!.</p>
             </div>
-        </div>
-        <div class="cuento-item">
-            <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante" width="150" height="auto"></a>
-            <div class="texto">
+            <div class="cuento-item">
+                <a href="la-fábula-de-la-gacela-y-el-león.html"><img src="imagen/cuento4/imagen1.avif" alt="Un bonito dibujo con el león y la gacela, protagonistas de un cuento muy interesante" width="150" height="auto"></a>
                 <h2><a href="la-fábula-de-la-gacela-y-el-león.html">La Fábula de la Gacela y el León</a></h2>
                 <p>✅🦁🦌 Descubre la hermosa amistad entre un león y una gacela!.</p>
             </div>
         </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kPJikyTTLPM?si=P-3V8dukq3MOmRlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="contenido">Para ver más cuentos y canciones visítame en Youtube.</p>
     </div>
-    <!-- Video de YouTube incrustado -->
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/kPJikyTTLPM?si=P-3V8dukq3MOmRlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <p class="contenido">Para ver más cuentos y canciones visítame en Youtube.</p>
     <footer>
         © 2024 Cuentos Infantiles. Todos los derechos reservados.
     </footer>
