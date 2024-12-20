@@ -1,6 +1,23 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oolgsdHGh2g?si=zcgnsO9GsY7hslXe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Vamos a probar a ver si se puede hacer más ágil.
+
+Tengo el siguiente cuento, que en las carpetas del repositorio para las imágenes figura como cuento6
+
+Ahí podrás tomar la imagen1 para el index.html y las dos imágenes para la página que vas a crear con el nuevo cuento.
+
+Te facilito título y descripción tanto para el archivo index como para la página del cuento de el monito Coco.
 
 
-Tito el Tigre y sus Amigos Unidos Frente al Fuego
+El título:
+El Monito Coco y la Lección de Responsabilidad
 
-D:\00 GITHUB RESPALDO\GitHub\Cuentos-Infantiles\imagen\cuento5
+La descripción:
+Descubre la historia de Coco, el monito que aprendió el valor de la responsabilidad y el amor al ayudar a su mamá. Un cuento infantil con una hermosa moraleja. 🌳✨
+
+Y finalmente este es el código para el video de YouTube que va insertado en la página del nuevo cuento.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lt-x6xLdmDc?si=ZOP_Z8NiN0fboYVK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Coloca este cuento en la posición 6 del index.
+
+Espero que puedas crear los dos archivos con esta información:
+index.html y el nuevo cuento
