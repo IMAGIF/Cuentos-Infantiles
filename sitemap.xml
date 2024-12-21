@@ -1,128 +1,72 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/index.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/index-thumbnail.jpg</video:thumbnail_loc>
-      <video:title>Introducción a Cuentos Infantiles</video:title>
-      <video:description>Disfruta de una colección de cuentos infantiles ilustrados con aventuras emocionantes para niños.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/kPJikyTTLPM</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/la-gran-aventura-de-tito-el-tigre.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento1/imagen3.avif</video:thumbnail_loc>
-      <video:title>La Gran Aventura del Tigre Tito</video:title>
-      <video:description>Únete a Tito el Tigre en una emocionante aventura a través de la selva.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/-_dj0pvVXg8</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/la-carrera-de-la-liebre-y-la-tortuga.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento2/imagen1.avif</video:thumbnail_loc>
-      <video:title>La Carrera entre la Liebre y la Tortuga</video:title>
-      <video:description>Acompaña a la tortuga y la liebre en una emocionante carrera llena de enseñanzas sobre la constancia y la determinación.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/jmAYzm_PnGY</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/el-tesoro-del-bosque-encantado.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento3/imagen1.avif</video:thumbnail_loc>
-      <video:title>El Tesoro del Bosque Encantado</video:title>
-      <video:description>Únete a Luna, Bobi, Nina y Roco en una emocionante aventura por el Bosque Encantado en busca de un misterioso tesoro.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/jeEe9Pf3qoA</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/la-fábula-de-la-gacela-y-el-león.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento4/imagen1.avif</video:thumbnail_loc>
-      <video:title>La Fábula de la Gacela y el León</video:title>
-      <video:description>Descubre la hermosa amistad entre un león y una gacela.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/wgowadQ36PY</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/tito-el-tigre-y-sus-amigos-unidos-frente-al-fuego.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento5/imagen1.avif</video:thumbnail_loc>
-      <video:title>Tito el Tigre y sus Amigos Unidos Frente al Fuego</video:title>
-      <video:description>Acompaña a Tito, Leo, Coco y NoNo en su aventura para salvar el bosque de un gran incendio tras una feroz tormenta.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/oolgsdHGh2g</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/el-monito-coco-y-la-leccion-de-responsabilidad.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento6/imagen1.avif</video:thumbnail_loc>
-      <video:title>El Monito Coco y la Lección de Responsabilidad</video:title>
-      <video:description>Descubre la historia de Coco, el monito que aprendió el valor de la responsabilidad y el amor al ayudar a su mamá.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/Lt-x6xLdmDc</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/el-superpoder-de-la-princesa-dorian.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento7/imagen1.avif</video:thumbnail_loc>
-      <video:title>El Superpoder de la Princesa Dorian</video:title>
-      <video:description>Acompaña a la princesa Dorian en esta encantadora aventura en el bosque.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/YTUBHptW08M</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/tito-el-tigre-y-las-abejas.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento8/imagen1.avif</video:thumbnail_loc>
-      <video:title>Tito el Tigre y las Abejas 🐯🍯</video:title>
-      <video:description>Disfruta de esta divertida historia donde Tito, un curioso tigre, aprende una valiosa lección sobre el respeto y la amistad mientras intenta conseguir un poco de miel.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/6cctpEprPC8</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/la-ardilla-y-la-lechuza.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento9/imagen1.avif</video:thumbnail_loc>
-      <video:title>La Ardilla y la Lechuza 🐿️🦉</video:title>
-      <video:description>Descubre cómo la ardilla aprende una valiosa lección sobre compartir y amistad en este encantador cuento.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/FWkRUHhqdYY</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/los-ninos-viajan-a-la-luna.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento10/imagen1.avif</video:thumbnail_loc>
-      <video:title>Los Niños Viajan a La Luna 🌕🚀👩‍🚀</video:title>
-      <video:description>Únete a un grupo de niños en su increíble aventura para viajar a la Luna.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/WLzEofDADvM</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/el-primer-boton-del-mundo.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento11/imagen1.avif</video:thumbnail_loc>
-      <video:title>El Primer Botón del Mundo</video:title>
-      <video:description>Acompaña a un niño en una emocionante aventura cuando descubre algo brillante con lo que puede hacer el primer botón de la historia.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/ymYrWas80sQ</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/aventuras-en-la-naturaleza-con-nono-y-tito-el-tigre.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento12/imagen1.avif</video:thumbnail_loc>
-      <video:title>Aventuras en la Naturaleza con NoNo y Tito el Tigre 🤖🐅</video:title>
-      <video:description>Acompaña a NoNo el robot rojo y Tito el Tigre en una emocionante aventura en la naturaleza.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/NQV8tZuWh3U</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imagif.github.io/Cuentos-Infantiles/las-olimpiadas-del-bosque.html</loc>
-    <video:video>
-      <video:thumbnail_loc>https://imagif.github.io/Cuentos-Infantiles/imagen/cuento13/imagen1.avif</video:thumbnail_loc>
-      <video:title>Las Olimpiadas del Bosque 🐯🦁🐘</video:title>
-      <video:description>Únete a los amigos del bosque en una emocionante competición donde deciden hacer sus propias olimpiadas.</video:description>
-      <video:content_loc>https://www.youtube.com/embed/I6jfVUbG97M</video:content_loc>
-    </video:video>
+    <lastmod>2024-12-21</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
