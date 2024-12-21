@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://imagif.github.io/Cuentos-Infantiles/sitemap.xml
