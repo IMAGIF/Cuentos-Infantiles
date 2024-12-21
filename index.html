@@ -64,22 +64,21 @@
             margin: 20px 0; /* Espacio alrededor del título */
         }
 
-        .cuento {
+        .contenido {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+            justify-content: center;
             gap: 20px; /* Espacio entre los elementos */
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 1200px; /* Ancho máximo del contenido */
+            margin: 0 auto; /* Centra el contenido */
         }
 
         .cuento-item {
             display: flex;
-            flex-direction: row; /* Coloca la imagen y el texto en una fila */
-            align-items: center; /* Centra verticalmente */
-            max-width: 800px;
-            width: 100%;
+            flex-direction: column; /* Coloca la imagen y el texto en una columna */
+            align-items: center; /* Centra horizontalmente */
+            max-width: 350px; /* Ancho máximo de cada item */
             background-color: #fff; /* Fondo blanco para el contenido */
             border-radius: 10px;
             padding: 10px;
@@ -88,14 +87,14 @@
         }
 
         .cuento-item img {
-            width: 150px; /* Ancho de la imagen */
+            width: 100%; /* Ancho de la imagen */
             height: auto;
             border-radius: 10px;
-            margin-right: 20px; /* Espacio entre la imagen y el texto */
+            margin-bottom: 10px; /* Espacio entre la imagen y el texto */
         }
 
         .cuento-item .texto {
-            flex-grow: 1;
+            text-align: center; /* Centra el texto */
         }
 
         .cuento-item h2 {
@@ -133,14 +132,11 @@
             }
 
             .cuento-item {
-                flex-direction: row; /* Mantener la dirección de fila */
-                align-items: center;
-                text-align: center; /* Centrar el texto */
+                max-width: 100%; /* Ancho máximo del 100% en dispositivos pequeños */
             }
 
             .cuento-item img {
-                width: 100px; /* Ajustar el ancho de la imagen para dispositivos pequeños */
-                margin-right: 10px; /* Espacio reducido entre la imagen y el texto */
+                width: 100%; /* Ajustar el ancho de la imagen para dispositivos pequeños */
             }
 
             .cuento-item .texto {
@@ -158,13 +154,6 @@
             margin: 0 auto; /* Centrar el footer */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-        }
-
-        .contenido {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Centrar el texto */
         }
 
         .video-container {
@@ -197,7 +186,7 @@
     <div class="barra-mensaje">
         <p>Haz clic en la imagen que desees y verás un bonito cuento. 😊</p>
     </div>
-    <div class="cuento">
+    <div class="contenido">
         <div class="cuento-item">
             <a href="la-gran-aventura-de-tito-el-tigre.html"><img src="imagen/cuento1/imagen3.avif" alt="Un bonito y colorido dibujo del personaje de Tito el Tigre"></a>
             <div class="texto">
@@ -283,10 +272,10 @@
             </div>
         </div>
         <div class="cuento-item">
-            <a href="las-olimpiadas-del-bosque.html"><img src="imagen/cuento13/imagen1.avif" alt="Un bonito dibujo de los animales del bosque celebrando las olimpiadas"></a>
+            <a href="las-olimpiadas-del-bosque.html"><img src="imagen/cuento13/imagen1.avif" alt="Un bonito dibujo de los animales del bosque participando en las olimpiadas"></a>
             <div class="texto">
                 <h2><a href="las-olimpiadas-del-bosque.html">Las Olimpiadas del Bosque 🐯🦁🐘</a></h2>
-                <p>✅🐯🦁🐘 Únete a los amigos del bosque en sus emocionantes olimpiadas, donde aprenderán sobre el trabajo en equipo y la amistad. Suscríbete a nuestro canal de YouTube para más cuentos.</p>
+                <p>✅🐯🦁🐘 Únete a los amigos del bosque en una emocionante competición donde deciden hacer sus propias olimpiadas. Aprende sobre la amistad, el trabajo en equipo y el espíritu deportivo en este encantador cuento infantil.</p>
             </div>
         </div>
     </div>
